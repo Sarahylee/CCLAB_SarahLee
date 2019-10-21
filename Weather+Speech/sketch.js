@@ -7,7 +7,7 @@ function setup() {
   c = color(87, 153, 160)
   background(c);
   loadJSON('https://api.openweathermap.org/data/2.5/weather?q=New%20York&APPID=e71a864b8a3305aa8f662efa08084a4f&units=imperial', gotData);
-  
+  speech.speak ('Click anywhere if you are blind');
   
 }
 function gotData(data) {
