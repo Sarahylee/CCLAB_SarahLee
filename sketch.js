@@ -16,7 +16,7 @@ function gotData(data) {
 
 function draw() {
 
-  strokeWeight(10); 
+  strokeWeight(2); 
   stroke(color(6, 53, 67));
   fill(255);
   text("City: New York", 10, 30);
@@ -37,5 +37,7 @@ function draw() {
 
 
 function mousePressed() {
-  speech.speak ('Temperature is' + weather.main.temp);
+  speech.speak ('The current temperature is' + weather.main.temp + 'degrees. The forecast for today is' + weather.weather[0].description + '. The humidity is' + weather.main.humidity);
+ 
 }
+
