@@ -1,22 +1,25 @@
 var weather;
 let c;
+var speech = new p5.Speech();
 
 function setup() {
   createCanvas(600, 300)
+  c = color(87, 153, 160)
+  background(c);
   loadJSON('https://api.openweathermap.org/data/2.5/weather?q=New%20York&APPID=e71a864b8a3305aa8f662efa08084a4f&units=imperial', gotData);
-
+  
+  
 }
 function gotData(data) {
   weather = data;
 }
+
 function draw() {
-  c = color(87, 153, 160)
-  background(c);
+
   strokeWeight(10); 
   stroke(color(6, 53, 67));
   fill(255);
   text("City: New York", 10, 30);
-  
   if (weather) {
     text("Current temperature: " + weather.main.temp, 10, 50);
     text("Forecast: " + weather.weather[0].description, 10, 70);
@@ -27,7 +30,12 @@ function draw() {
     text("Humidity: " + weather.main.humidity, 265, 210);
     text("Min Temperature: " + weather.main.temp_min, 440, 210);
     
+  
     
   }
-  
+}
+
+
+function mousePressed() {
+  speech.speak ('Temperature is' + weather.main.temp);
 }
