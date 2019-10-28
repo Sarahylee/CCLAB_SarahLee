@@ -4,11 +4,11 @@ let c;
 var air;
 var b;
 
-function preload()
-{
-   load image
-  img1 = loadImage('Fire.jpg');
-}
+//function preload()
+//{
+//   load image
+//  img1 = loadImage('Fire.jpg');
+//}
 
 function setup() {
   createCanvas(645, 363);
