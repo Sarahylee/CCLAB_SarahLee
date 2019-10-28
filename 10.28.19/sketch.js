@@ -11,7 +11,6 @@ function preload()
 }
 
 function setup() {
-  image (img, 0, 0);
   createCanvas(645, 363);
   fill(240);
   noStroke();
