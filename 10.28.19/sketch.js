@@ -42,7 +42,7 @@ function draw() {
     flake.display(); // draw snowflake
   }
   if (air){
-  text('Pollution in San Jose, CA is: ' + air.data.current.pollution.aqius + ' due to the current wildfires.', 10, 10);
+  text('Pollution in San Jose, CA is: ' + air.data.current.pollution.aqius + ' due to the current wildfires.', 180, 175);
   // console.log();
   
   b = air.data.current.pollution.aqius / 10;
